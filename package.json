@@ -1,0 +1,38 @@
+{
+  "name": "vscode-explorer-spacing",
+  "displayName": "Explorer Spacing",
+  "description": "Customize vertical spacing in the VS Code Explorer.",
+  "version": "1.0.0",
+  "publisher": "ki5an",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "explorerSpacing.apply",
+        "title": "Explorer Spacing: Apply"
+      },
+      {
+        "command": "explorerSpacing.restore",
+        "title": "Explorer Spacing: Restore"
+      }
+    ],
+    "configuration": {
+      "title": "Explorer Spacing",
+      "properties": {
+        "explorerSpacing.rowHeight": {
+          "type": "number",
+          "default": 32,
+          "minimum": 20,
+          "maximum": 60,
+          "description": "Height of each Explorer file and folder row in pixels."
+        }
+      }
+    }
+  }
+}
